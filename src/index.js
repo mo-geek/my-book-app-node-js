@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 const { seedBooks } = require('./seed/seedBooks');
 
 const PORT = process.env.PORT || 3000;
-
+const mongodbURL = 'mongodb+srv://bookstore:nal7JBoZLUnVmz37@bookstore.sxjjj.mongodb.net/bookstore?retryWrites=true&w=majority&appName=bookstore';
 mongoose
-    .connect('mongodb://127.0.0.1:27017/mybookdb')
+    .connect(mongodbURL)
     .then( async () => {
         console.log('MongoDB connected');
 
